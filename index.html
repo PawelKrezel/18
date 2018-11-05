@@ -8,25 +8,48 @@
 		td{text-align: center;}
 	</style>
 </head>
+<script type="text/javascript">var ge_basi = []; var ge_oliwi = []</script>
 <body background="bg.jpg">
 <center>
-<table width="100%"  border="1" cellpadding="10">
+<table width="100%"  border="0" cellpadding="10">
 	<th colspan="2"><h1>Kto Ty taki?</h1></th>
 	<tr><td width="50%">
 		<img src="oli.jpg" width="250px" height=250px"><br><h2>Oliwka! ^.^</h2><br>
-		<form method="POST">
-			Nazwa :<br>
-			<input type="text" name="nazwa" placeholder="imprezowicz"> <input type="submit" value="Zapisz">
-		</form>
+		<font>Nazwa:</font><br>
+		<input type="text" id="g_oliwi" value="" placeholder="imprezowicz" />
+		<button onclick="getValueo()">Zapisz</button>
+		<p id="l_oliwi"></p>
+		<script>
+			
+			function getValueo()
+			{
+				var z = document.getElementById('l_oliwi');
+				var c = document.getElementById('g_oliwi').value;
+				ge_oliwi.push(c)
+				ge_oliwi.push("<br>")
+				z.innerHTML=ge_oliwi;
+			}
+		</script>
 	</td>
 
 	<td width="50%">
 		<img src="basi.jpg"  width=250px" height=250px"><br><h2>Basiunia! :3</h2><br>
-		<form method="POST">
-			Nazwa :<br>
-			<input type="text" name="nazwa" placeholder="imprezowicz"> <input type="submit" value="Zapisz">
-		</form>							       
-	
+		<font>Nazwa:</font><br>
+		<input type="text" id="g_basi" value="" placeholder="imprezowicz" />
+		<button onclick="getValue()">Zapisz</button>
+		<p id="l_basi"></p>
+		<script>
+			
+			function getValue()
+			{
+				var y = document.getElementById('l_basi');
+				var x = document.getElementById('g_basi').value;
+				ge_basi.push(x)
+				ge_basi.push("<br>")
+				y.innerHTML=ge_basi;
+			}
+		</script>
+			
 	</td></tr>
 
 	<tr><td colspan="2">
